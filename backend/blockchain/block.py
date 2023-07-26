@@ -81,6 +81,22 @@ class Block:
 
         return 1
 
+    @staticmethod
+    def is_valid_block(last_block, block):
+        """
+        check if the given block is valid
+        """
+        if block.timestamp < last_block.timestamp:
+            return False
+
+        if block.difficulty < last_block.difficulty:
+            return False
+
+        if block.nonce < last_block.nonce:
+            return False
+
+        return True
+
 def main():
 
     genesis_block = Block.genesis()

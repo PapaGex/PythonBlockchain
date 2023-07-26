@@ -14,6 +14,9 @@ class Blockchain:
     def __repr__(self):
         return f'Blockchain: {self.chain}'
 
+    def replace_chain(self, chain):
+        
+
 def main():
     blockchain = Blockchain()
     blockchain.add_block('one')
